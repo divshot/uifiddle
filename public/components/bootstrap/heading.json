@@ -1,0 +1,15 @@
+{
+  "name": "bootstrap/heading",
+  "label": "Heading",
+
+  "css": ["bootstrap"],
+
+  "fields": [
+    {"type":"text","name":"title","label":"Title","default":"This is a Heading"},
+    {"type":"text","name":"subtitle","label":"Subtitle","default":null},
+    {"type":"select","name":"tag","label":"Level","default":"h1","options":[["H1","h1"],["H2","h2"],["H3","h3"],["H4","h4"],["H5","h5"],["H6","h6"]]},
+    {"type":"checkbox","name":"page_header","label":"Page Header","default":false}
+  ],
+
+  "template": "{{#if page_header}}<div class='page-header'>{{/if}}<{{tag}}>{{title}}{{#if subtitle}} <small>{{subtitle}}</small>{{/if}}</{{tag}}>{{#if page_header}}</div>{{/if}}"
+}
