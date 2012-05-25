@@ -1,0 +1,8 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard 'coffeescript', :input => 'src', :output => 'lib'
+
+guard 'compass' do
+  watch(%r{^sass/(.*)\.s[ac]ss})
+end

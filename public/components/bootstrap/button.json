@@ -1,0 +1,18 @@
+{
+  "name": "bootstrap/button",
+  "label": "Button",
+
+  "droppable": false,
+
+  "css": ["bootstrap"],
+
+  "fields": [
+    {"type":"text", "label":"Label", "name":"label", "default":"Button"},
+    {"type":"select", "label":"Tag", "name":"tag", "options":[["Link", "a"],["Button","button"]], "default":"a"},
+    {"type":"select", "label":"Color", "name":"size", "options":[["Default",""],["Primary","btn-primary"], ["Info", "btn-info"], ["Success", "btn-success"], ["Warning", "btn-warning"], ["Danger", "btn-danger"], ["Inverse", "btn-inverse"]], "default":""},
+    {"type":"select", "label":"Size", "name":"color", "options":[["Mini", "btn-mini"], ["Small", "btn-small"], ["Default", ""], ["Large", "btn-large"]], "default":""},
+    {"type":"checkbox", "label":"Disabled", "name":"disabled", "default":false}
+  ],
+
+  "template":"<{{tag}} class=\"btn{{#if size}} {{size}}{{/if}}{{#if color}} {{color}}{{/if}}{{#if disabled}} disabled{{/if}}\" href=\"javascript:;\">{{#if icon}}<i class=\"icon {{icon}} {{#if inverted}}icon-white{{/if}}\"></i> {{/if}}{{label}}</{{tag}}>"
+}
