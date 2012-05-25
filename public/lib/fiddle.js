@@ -4,8 +4,9 @@
   App = {
     boot: function() {
       App.view = new App.View();
-      return _.each(["bootstrap/alert","bootstrap/button"], function(name) {
+      return _.each(["bootstrap/alert", "bootstrap/button", "bootstrap/hero"], function(name) {
         return $.getJSON("components/" + name + ".json", function(response) {
+          console.log(response);
           UI.registerComponent(response);
           return App.view.picker.render();
         });

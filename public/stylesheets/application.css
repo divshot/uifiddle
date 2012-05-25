@@ -113,4 +113,9 @@ html, body {
   border-left: 2px solid #cccccc;
   background: white;
   padding: 20px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }

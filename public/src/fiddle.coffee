@@ -1,8 +1,9 @@
 App =
   boot: ->
     App.view = new App.View()
-    _.each ["bootstrap/button"], (name)->
+    _.each ["bootstrap/alert","bootstrap/button","bootstrap/hero"], (name)->
       $.getJSON "components/#{name}.json", (response)->
+        console.log response
         UI.registerComponent(response)
         App.view.picker.render()
 

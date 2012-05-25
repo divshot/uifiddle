@@ -1,0 +1,16 @@
+{
+  "name": "bootstrap/hero",
+  "label": "Hero",
+
+  "droppable": false,
+
+  "css": ["bootstrap"],
+
+  "fields": [
+    {"type":"text","name":"title","label":"Title","default":"Heroic Title"},
+    {"type":"text","name":"subtitle","label":"Subtitle","default":"Smaller text goes here, perhaps a slogan?"},
+    {"type":"text","name":"button_label","label":"Button Label","default":"Sign Up Today!"}
+  ],
+
+  "template": "<div class=\"hero-unit\">\n  <h1>{{{title}}}</h1>\n  <p>{{{subtitle}}}</p>\n  <p>\n    <a class=\"btn btn-primary btn-large\" href=\"#\">{{button_label}}</a>\n  </p>\n</div>"
+}
