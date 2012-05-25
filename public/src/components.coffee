@@ -8,7 +8,6 @@ UI.registerComponent = (data)->
   data = _.clone data
   data.fields = new UI.Fieldset(data.fields, parse: true)
   component = UI.Component.extend(data)
-  console.log component, data.name
   component.prototype.fields.each (field)-> field.component = data.name
   UI.Components[data.name] = component
 

@@ -14,5 +14,5 @@
     {"type":"checkbox", "label":"Disabled", "name":"disabled", "default":false}
   ],
 
-  "template":"<{{tag}} class=\"btn{{#if size}} {{size}}{{/if}}{{#if color}} {{color}}{{/if}}{{#if disabled}} disabled{{/if}}\" href=\"javascript:;\">{{#if icon}}<i class=\"icon {{icon}} {{#if inverted}}icon-white{{/if}}\"></i> {{/if}}{{label}}</{{tag}}>"
+  "template":"<{{tag}} class=\"btn{{#if size}} {{size}}{{/if}}{{#if color}} {{color}}{{/if}}{{#if disabled}} disabled{{/if}}\" href=\"#\">{{#if icon}}<i class=\"icon {{icon}} {{#if inverted}}icon-white{{/if}}\"></i> {{/if}}{{label}}</{{tag}}>"
 }

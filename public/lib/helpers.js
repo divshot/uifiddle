@@ -18,21 +18,17 @@
       }
     },
     select: function(options, value) {
-      var opts;
-      opts = [];
-      _.each(options.options, function(option) {
-        return opts.push({
+      var selections,
+        _this = this;
+      selections = _.map(options.options, function(option) {
+        return {
           label: option[0],
           value: option[1],
           selected: value === option[1]
-        });
+        };
       });
-      console.log(opts, _.extend(options, {
-        options: opts,
-        value: value || options["default"]
-      }));
-      return Helpers.Templates.select(_.extend(options, {
-        options: opts,
+      return Helpers.Templates.select(_.extend(_.clone(options), {
+        options: selections,
         value: value || options["default"]
       }));
     }

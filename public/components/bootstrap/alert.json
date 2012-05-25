@@ -1,0 +1,16 @@
+{
+  "name":"bootstrap/alert",
+  "label":"Alert",
+
+  "droppable":false,
+
+  "css":["bootstrap"],
+
+  "fields":[
+    {"type":"text","name":"title","label":"Title","default":"Warning!"},
+    {"type":"text","name":"message","label":"Message","default":"Here there be dragons."},
+    {"type":"select","name":"color","label":"Color","options":[["Default",""],["Error","alert-error"],["Warning","alert-warning"],["Success","alert-success"],["Info","alert-info"]]}
+  ],
+
+  "template":"<div class=\"alert{{#if color}} {{color}}{{/if}}\">\n  <a class=\"close\" data-dismiss=\"alert\">&times;</a>\n  <strong>{{title}}</strong> {{message}}\n</div>"
+}

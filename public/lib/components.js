@@ -17,7 +17,6 @@
       parse: true
     });
     component = UI.Component.extend(data);
-    console.log(component, data.name);
     component.prototype.fields.each(function(field) {
       return field.component = data.name;
     });

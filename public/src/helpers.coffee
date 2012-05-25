@@ -31,10 +31,8 @@ Helpers =
     else
       Helpers.Templates[options.type](_.extend options, {value: value || options.default})
   select: (options, value)->
-    opts = []
-    _.each options.options, (option)->
-      opts.push {label: option[0], value: option[1], selected: (value == option[1])}
-    console.log opts, _.extend(options, {options: opts, value: value || options.default})
-    Helpers.Templates.select _.extend(options, {options: opts, value: value || options.default})
+    selections = _.map options.options, (option)=>
+      {label: option[0], value: option[1], selected: (value == option[1])}
+    Helpers.Templates.select _.extend(_.clone(options), {options: selections, value: value || options.default})
 
 if exports? then exports = Helpers else window.Helpers = Helpers
