@@ -4,7 +4,7 @@
   App = {
     boot: function() {
       App.view = new App.View();
-      return _.each(["bootstrap/alert", "bootstrap/button", "bootstrap/heading", "bootstrap/hero"], function(name) {
+      return _.each(["bootstrap/alert", "bootstrap/breadcrumbs", "bootstrap/button", "bootstrap/heading", "bootstrap/hero"], function(name) {
         return $.getJSON("components/" + name + ".json", function(response) {
           console.log(response);
           UI.registerComponent(response);

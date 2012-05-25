@@ -100,4 +100,23 @@
 
   window.UI = UI;
 
+  Handlebars.registerHelper("split", function(string, separator, options) {
+    var array;
+    array = string.split(separator);
+    return options.fn(array, options);
+  });
+
+  Handlebars.registerHelper("last", function(collection, options) {
+    var comp;
+    comp = this;
+    if (_.isString(this)) {
+      comp = this.toString();
+    }
+    if (_.last(collection) === comp) {
+      return options.fn(this);
+    } else {
+      return options.inverse(this);
+    }
+  });
+
 }).call(this);

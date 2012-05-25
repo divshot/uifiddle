@@ -1,7 +1,7 @@
 App =
   boot: ->
     App.view = new App.View()
-    _.each ["bootstrap/alert","bootstrap/button","bootstrap/heading","bootstrap/hero"], (name)->
+    _.each ["bootstrap/alert","bootstrap/breadcrumbs","bootstrap/button","bootstrap/heading","bootstrap/hero"], (name)->
       $.getJSON "components/#{name}.json", (response)->
         console.log response
         UI.registerComponent(response)

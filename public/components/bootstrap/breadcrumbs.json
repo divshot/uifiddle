@@ -1,0 +1,12 @@
+{
+  "name": "bootstrap/breadcrumbs",
+  "label": "Breadcrumbs",
+
+  "css": ["bootstrap"],
+
+  "fields": [
+    {"type":"text","name":"crumbs","label":"Breadcrumbs (separate with ' / ')","default":"Crumb One / Crumb Two / Crumb Three"}
+  ],
+
+  "template": "<ul class=\"breadcrumb\">\n  {{#split crumbs \" / \"}}{{#each this}}{{#last ../this}}<li class=\"active\">{{this}}</li>{{else}}<li><a href=\"#\">{{this}}</a> <span class=\"divider\">/</span></li>\n  {{/last}}{{/each}}{{/split}}\n</ul>"
+}

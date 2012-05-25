@@ -54,3 +54,15 @@ UI.Fieldset = Backbone.Collection.extend
     out
 
 window.UI = UI
+
+Handlebars.registerHelper "split", (string, separator, options)->
+  array = string.split(separator)
+  options.fn(array, options)
+
+Handlebars.registerHelper "last", (collection, options)->
+  comp = this
+  comp = this.toString() if _.isString(this)
+  if _.last(collection) == comp
+    options.fn(this)
+  else
+    options.inverse(this)
